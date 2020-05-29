@@ -12,21 +12,22 @@ public class avaliacao29_05 {
 		char opcao='s';
 		
 		//LEITURA DE DADOS 
-		System.out.print("Nome: ");
-		nome=sc.next();
-		System.out.println("Horas trabalhadas: ");
-		horasTrabalhadas=sc.nextDouble();
-		System.out.println("Digitar outro (S/N)? ");
-		nome=sc.next();
-		
+	
 		while( opcao == 's'){
 			System.out.print("Nome: ");
 			nome=sc.next();
-			System.out.println("Horas trabalhadas: ");
+			System.out.print("Horas trabalhadas: ");
 			horasTrabalhadas=sc.nextDouble();
-			System.out.println("Digitar outro (S/N)? ");
+			if(horasTrabalhadas< 0.0) {
+				System.out.print("VALOR INVALIDO, POR FAVOR DIGITE NOVAMENTE!");
+				horasTrabalhadas=sc.nextDouble();
+			}
+			System.out.print("Digitar outro (S/N)? ");
 			nome=sc.next();
+
 		}
+		
+		
 		
 		
 		sc.close();
